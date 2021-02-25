@@ -60,3 +60,26 @@ const {
 
 // Being sure to do all that's outlined above, write
 // your code below!
+
+
+const email = getInput(1);
+const password = getInput(2);
+console.log(email);
+console.log(password);
+
+  if (passwordMatches(email,password)){
+    console.log("Logged in");
+  }
+  if(isRegisteredUser(email)){
+    if(!passwordMatches(email ,password)){
+      console.log("Password Is Incorrect!");
+    }
+  }else{
+    if(isValidEmail(email) && isValidPassword(password)){
+      console.log("Signed Up");
+    }else if (!isValidEmail(email)){
+      console.log("Invalid Email");
+    }else if(!isValidPassword(password)){
+      console.log("Invalid Password");
+    }
+  } 
